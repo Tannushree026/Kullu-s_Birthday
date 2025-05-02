@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quicksand:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #e0f7fa, #ffe0b2); /* Updated background */
+      color: #3a3a3a;
+      text-align: center;
+      padding-top: 100px;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background-color: #009688; /* Updated navbar color */
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #b2dfdb; /* light teal on hover */
+    }
+
+    .card {
+      background-color: #ffffff;
+      border: 2px solid #b2dfdb; /* lighter border to match new theme */
+      border-radius: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+      padding: 50px 30px;
+      max-width: 600px;
+      margin: 20px auto;
+      position: relative;
+      z-index: 10;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .message {
+      font-size: 36px;
+      font-family: 'Playfair Display', serif;
+      color: #00695c; /* deep teal */
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .birthday-img {
+      margin-top: 25px;
+      border-radius: 20px;
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .birthday-msg {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #4b4b4b;
+      line-height: 1.6;
+    }
+
+    .balloon-left,
+    .balloon-right {
+      position: absolute;
+      top: 10px;
+      font-size: 48px;
+      animation: float 3.5s ease-in-out infinite;
+      color: #ff8a65; /* soft orange balloons */
+    }
+
+    .balloon-left {
+      left: -30px;
+    }
+
+    .balloon-right {
+      right: -30px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    /* Confetti */
+    .confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .confetti-piece {
+      position: absolute;
+      width: 8px;
+      height: 16px;
+      background-color: #ffcc80; /* soft orange confetti */
+      opacity: 0.8;
+      animation: fall 4.5s linear infinite;
+      border-radius: 2px;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .nav-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      vertical-align: middle;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-icon:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html">
+          <img src="27/Photos/g1.png" alt="Home" class="nav-icon" />
+        </a>
+      </li>
+      <li><a href="family.html">Family <i class="fas fa-people-group"></i></a></li>
+      <li><a href="photos.html">Scrapbook <i class="fas fa-camera-retro"></i></a></li>
+      <li><a href="video.html">Funny Me <i class="fas fa-film"></i></a></li>
+      <li><a href="msg.html">Letter For You <i class="fas fa-envelope"></i></a></li>
+      <li><a href="songs.html">Songs <i class="fas fa-music"></i></a></li>
+    </ul>
+  </nav>
+
+  <div class="card">
+    <div class="balloon-left">🎈</div>
+    <div class="balloon-right">🎈</div>
+    <h1 class="message">🎉 Happy Birthday, Love! 🎂</h1>
+    <img src="27/Photos/g1.png" alt="Birthday" class="birthday-img" />
+    <div class="birthday-msg">
+      You make every moment brighter and every day worth waking up to. <br/>
+      I’m so lucky to have you in my life. <br/>
+      Wishing you all the love, laughter, and cake in the world today! 💖
+    </div>
+  </div>
+
+  <div class="confetti"></div>
+
+  <script>
+    // Confetti creation script
+    const confetti = document.querySelector('.confetti');
+
+    function createConfettiPiece() {
+      const piece = document.createElement('div');
+      piece.classList.add('confetti-piece');
+      piece.style.left = Math.random() * 100 + 'vw';
+      piece.style.animationDuration = 3 + Math.random() * 3 + 's';
+      piece.style.backgroundColor = ['#ffcc80', '#ffe0b2', '#ffab91'][Math.floor(Math.random() * 3)];
+      confetti.appendChild(piece);
+
+      setTimeout(() => {
+        piece.remove();
+      }, 6000);
+    }
+
+    setInterval(createConfettiPiece, 200);
+  </script>
+</body>
+</html>
