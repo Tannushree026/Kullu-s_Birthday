@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Day 6 Videos</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #e0f7fa, #ffe0b2); /* Matching gradient background */
+      font-family: 'Quicksand', sans-serif;
+      padding: 100px 20px 40px; /* Add space for nav */
+      text-align: center;
+      color: #3a3a3a;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background-color: #009688; /* Matching navbar color */
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #b2dfdb;
+    }
+
+    h1 {
+      color: #00695c; /* Deep teal heading */
+      margin-bottom: 30px;
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+    }
+
+    .video-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    button {
+      padding: 15px;
+      background-color: #009688; /* Teal button */
+      border: 2px solid #b2dfdb;
+      color: white;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00796b; /* Slightly darker teal on hover */
+      transform: scale(1.05);
+    }
+
+    .nav-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      vertical-align: middle;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-icon:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html">
+          <img src="27/Photos/g1.png" alt="Home" class="nav-icon" />
+        </a>
+      </li>
+      <li><a href="family.html">Family <i class="fas fa-people-group"></i></a></li>
+      <li><a href="photos.html">Scrapbook <i class="fas fa-camera-retro"></i></a></li>
+      <li><a href="video.html">Funny Me <i class="fas fa-film"></i></a></li>
+      <li><a href="msg.html">Letter For You <i class="fas fa-envelope"></i></a></li>
+      <li><a href="songs.html">Songs <i class="fas fa-music"></i></a></li>
+    </ul>
+  </nav>
+
+  <h1>🎥 Day 6 - Special Videos</h1>
+
+  <div class="video-buttons">
+    <button onclick="playVideo('27/Videos/day6.1.mp4')">Video 1</button>
+    <button onclick="playVideo('27/Videos/day6.2.mp4')">Video 2</button>
+    <button onclick="playVideo('27/Videos/day6.3.mp4')">Video 3</button>
+  </div>
+
+  <script>
+    function playVideo(path) {
+      window.open(path, '_blank');
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</body>
+</html>

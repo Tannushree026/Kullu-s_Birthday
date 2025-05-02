@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Family</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quicksand:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #e0f7fa, #ffe0b2); /* Updated background */
+      color: #333;
+      padding-top: 100px;
+    }
+
+    nav {
+      background-color: #009688; /* Updated nav bar color */
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white; /* Updated nav link color */
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #b2dfdb; /* Updated hover color */
+    }
+
+    .nav-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-icon:hover {
+      transform: scale(1.1);
+    }
+
+    h1 {
+      color: #00695c; /* Updated h1 color */
+      font-size: 40px;
+      margin: 30px 0;
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+    }
+
+    .timeline-container {
+      max-width: 1000px;
+      margin: 60px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      padding: 0 20px;
+    }
+
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      gap: 40px;
+    }
+
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .member-info {
+      text-align: center;
+    }
+
+    .member-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #355e3b; /* Updated text color */
+      margin-bottom: 20px;
+    }
+
+    .member-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      border: 3px solid #d4af37;
+    }
+
+    .member-video video {
+      width: 300px;
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      border: 2px solid #355e3b;
+    }
+
+    .small-video {
+      width: 300px;
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      border: 2px solid #355e3b;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-item {
+        flex-direction: column;
+      }
+      .timeline-item:nth-child(even) {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html"><img src="27/Photos/g1.png" alt="Home" class="nav-icon" /></a></li>
+      <li><a href="family.html">Family <i class="fas fa-people-group"></i></a></li>
+      <li><a href="photos.html">Scrapbook <i class="fas fa-camera-retro"></i></a></li>
+      <li><a href="video.html">Funny Me <i class="fas fa-film"></i></a></li>
+      <li><a href="msg.html">Letter For You <i class="fas fa-envelope"></i></a></li>
+      <li><a href="songs.html">Songs <i class="fas fa-music"></i></a></li>
+    </ul>
+  </nav>
+
+  <h1>🤍 Our Beautiful Family</h1>
+
+  <div class="timeline-container">
+
+    <!-- Member 1 -->
+    <div class="timeline-item">
+      <div class="member-info">
+        <h2>Mom</h2>
+        <img src="27/Photos/gl1.png" alt="Mom" class="member-photo">
+      </div>
+      <div class="member-video">
+        <video controls class="small-video">
+          <source src="27/Videos/dalyc3.4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <!-- Member 2 -->
+    <div class="timeline-item">
+      <div class="member-info">
+        <h2>Dad</h2>
+        <img src="27/Photos/family2.jpg" alt="Dad" class="member-photo">
+      </div>
+      <div class="member-video">
+        <video controls>
+          <source src="27/videos/dad_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <!-- Member 3 -->
+    <div class="timeline-item">
+      <div class="member-info">
+        <h2>Sister</h2>
+        <img src="27/Photos/family3.jpg" alt="Sister" class="member-photo">
+      </div>
+      <div class="member-video">
+        <video controls>
+          <source src="27/videos/sister_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <!-- Member 4 -->
+    <div class="timeline-item">
+      <div class="member-info">
+        <h2>Brother</h2>
+        <img src="27/Photos/family4.jpg" alt="Brother" class="member-photo">
+      </div>
+      <div class="member-video">
+        <video controls>
+          <source src="27/videos/brother_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

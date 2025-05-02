@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Playlist</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&family=Quicksand&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #e0f2f1, #ffffff);
+      color: #333;
+      padding-top: 100px;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background-color: #009688; /* Teal background */
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #b2dfdb; /* Soft teal hover */
+    }
+
+    .nav-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      vertical-align: middle;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-icon:hover {
+      transform: scale(1.1);
+    }
+
+    h1 {
+      color: #00695c; /* Deep teal */
+      font-size: 36px;
+      margin: 40px 20px;
+      font-family: 'Pacifico', cursive;
+    }
+
+    .playlist {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .song-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 150, 136, 0.2); /* Teal shadow */
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .song-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .album-art {
+      width: 100%;
+      height: 300px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    .song-info {
+      margin-top: 15px;
+    }
+
+    .song-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #00695c;
+    }
+
+    .artist {
+      font-size: 14px;
+      color: #777;
+      margin-top: 5px;
+    }
+
+    .audio-player {
+      margin-top: 10px;
+    }
+
+    .back-link {
+      margin: 40px 0;
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background-color: #009688;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+      font-size: 18px;
+    }
+
+    .back-link:hover {
+      background-color: #b2dfdb;
+      color: #00695c;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html">
+          <img src="27/Photos/g1.png" alt="Home" class="nav-icon" />
+        </a>
+      </li>
+      <li><a href="family.html">Family <i class="fas fa-people-group"></i></a></li>
+      <li><a href="photos.html">Scrapbook <i class="fas fa-camera-retro"></i></a></li>
+      <li><a href="video.html">Funny Me <i class="fas fa-film"></i></a></li>
+      <li><a href="msg.html">Letter For You <i class="fas fa-envelope"></i></a></li>
+      <li><a href="songs.html">Songs <i class="fas fa-music"></i></a></li>
+    </ul>
+  </nav>
+
+  <h1>💖 Our Mini Playlist</h1>
+
+  <div class="playlist">
+    <!-- Song Card 1 -->
+    <div class="song-card">
+      <img src="27/Photos/g5.png" class="album-art" alt="A Thousand Years">
+      <div class="song-info">
+        <div class="song-title">A Thousand Years</div>
+        <div class="artist">Christina Perri</div>
+        <div class="audio-player">
+          <audio controls>
+            <source src="27/songs/Christina Perri  A Thousand Years.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div>
+    </div>
+
+    <!-- Song Card 2 -->
+    <div class="song-card">
+      <img src="27/Photos/g6.png" class="album-art" alt="Perfect">
+      <div class="song-info">
+        <div class="song-title">Perfect</div>
+        <div class="artist">Ed Sheeran</div>
+        <div class="audio-player">
+          <audio controls>
+            <source src="27/songs/Ed Sheeran - Perfect.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div>
+    </div>
+
+    <!-- Song Card 3 -->
+    <div class="song-card">
+      <img src="27/Photos/g4.png" class="album-art" alt="Just The Way You Are">
+      <div class="song-info">
+        <div class="song-title">Just The Way You Are</div>
+        <div class="artist">Bruno Mars</div>
+        <div class="audio-player">
+          <audio controls>
+            <source src="27/songs/bruno_mars-just_the_way_you_are.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div>
+    </div>
+
+    <!-- Song Card 4 -->
+    <div class="song-card">
+      <img src="27/Photos/g2.png" class="album-art" alt="All of Me">
+      <div class="song-info">
+        <div class="song-title">All of Me</div>
+        <div class="artist">John Legend</div>
+        <div class="audio-player">
+          <audio controls>
+            <source src="27/songs/12 - John Legend - All of Me.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div>
+    </div>
+
+    <!-- Song Card 5 -->
+    <div class="song-card">
+      <img src="27/Photos/g7.png" class="album-art" alt="Thinking Out Loud">
+      <div class="song-info">
+        <div class="song-title">Thinking Out Loud</div>
+        <div class="artist">Ed Sheeran</div>
+        <div class="audio-player">
+          <audio controls>
+            <source src="27/songs/Ed Sheeran - Thinking out Loud.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div>
+    </div>
+
+    <!-- Song Card 6 -->
+    <div class="song-card">
+      <img src="27/Photos/g10.png" class="album-art" alt="The Archer">
+      <div class="song-info">
+        <div class="song-title">The Archer</div>
+        <div class="artist">Taylor Swift</div>
+        <div class="audio-player">
+          <audio controls>
+            <source src="27/songs/Taylor Swift-The Archer.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div>
+    </div>
+
+    <!-- Song Card 7 -->
+    <div class="song-card">
+      <img src="27/Photos/g3.png" class="album-art" alt="Moh Moh Ke Dhaage">
+      <div class="song-info">
+        <div class="song-title">Moh Moh Ke Dhaage</div>
+        <div class="artist">Monali Thakur</div>
+        <div class="audio-player">
+          <audio controls>
+            <source src="27/songs/Moh Moh Ke Dhaage (Female) - Dum Laga Ke Haisha 320 Kbps.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div>
+    </div>
+
+    <!-- Song Card 8 -->
+    <div class="song-card">
+      <img src="27/Photos/g9.png" class="album-art" alt="Tum Se Hi">
+      <div class="song-info">
+        <div class="song-title">Tum Se Hi</div>
+        <div class="artist">Mohit Chauhan, Pritam</div>
+        <div class="audio-player">
+          <audio controls>
+            <source src="27/songs/Tum Se Hi - Jab We Met 320 Kbps.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div>
+    </div>
+
+    <!-- Song Card 9 -->
+    <div class="song-card">
+      <img src="27/Photos/g8.png" class="album-art" alt="Ibadatein">
+      <div class="song-info">
+        <div class="song-title">Ibadatein</div>
+        <div class="artist">Rito Riba, Siddhant Kaushal</div>
+        <div class="audio-player">
+          <audio controls>
+            <source src="27/songs/Ibadatein Rito Riba 320 Kbps.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a class="back-link" href="index.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+</body>
+</html>

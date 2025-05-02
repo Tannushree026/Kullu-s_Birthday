@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video Gallery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quicksand:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #e0f7fa, #ffe0b2);
+      color: #333;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    nav {
+      background-color: #009688; /* Updated to match first code */
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #b2dfdb;
+    }
+
+    .nav-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-icon:hover {
+      transform: scale(1.1);
+    }
+
+    h1 {
+      color: #00695c; /* Matching h1 color */
+      font-size: 40px;
+      margin-bottom: 30px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .video-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    button, a.button {
+      padding: 15px;
+      background-color: #009688;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    button:hover, a.button:hover {
+      background-color: #b2dfdb;
+      color: #00695c;
+    }
+
+    .message {
+      font-size: 40px;
+      margin-top: 50px;
+      color: #00695c;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section {
+      margin-top: 60px;
+      padding: 30px;
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .content {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html">
+          <img src="27/Photos/g1.png" alt="Home" class="nav-icon" />
+        </a>
+      </li>
+      <li><a href="family.html">Family <i class="fas fa-people-group"></i></a></li>
+      <li><a href="photos.html">Scrapbook <i class="fas fa-camera-retro"></i></a></li>
+      <li><a href="video.html">Funny Me <i class="fas fa-film"></i></a></li>
+      <li><a href="msg.html">Letter For You <i class="fas fa-envelope"></i></a></li>
+      <li><a href="songs.html">Songs <i class="fas fa-music"></i></a></li>
+    </ul>
+  </nav>
+
+  <h1>🎬 Birthday Videos</h1>
+
+  <div class="video-buttons">
+    <button onclick="playVideo('27/Videos/Day1.mp4')">Day 1</button>
+    <a class="button" href="day2.html">Day 2</a>
+    <a class="button" href="day3.html">Day 3</a>
+    <a class="button" href="day4.html">Day 4</a>
+    <a class="button" href="day5.html">Day 5</a>
+    <a class="button" href="day6.html">Day 6</a>
+    <button onclick="playVideo('27/Videos/Day7.mp4')">Day 7</button>
+    <button onclick="playVideo('27/Videos/Day8.mp4')">Day 8</button>
+    <button onclick="playVideo('27/Videos/Day9.mp4')">Day 9</button>
+    <a class="button" href="day10.html">Day 10</a>
+    <a class="button" href="day11.html">Day 11</a>
+    <a class="button" href="day12.html">Day 12</a>
+    <a class="button" href="day13.html">Day 13</a>
+    <button onclick="playVideo('27/Videos/day14.1.mp4')">Day 14</button>
+    <a class="button" href="day15.html">Day 15</a>
+    <button onclick="playVideo('27/Videos/day16.1.mp4')">Day 16</button>
+    <button onclick="playVideo('27/Videos/day17.1.mp4')">Day 17</button>
+    <a class="button" href="day18.html">Day 18</a>
+    <button onclick="playVideo('27/Videos/day19.1.mp4')">Day 19</button>
+    <button onclick="playVideo('27/Videos/day20.1.mp4')">Day 20</button>
+    <a class="button" href="day21.html">Day 21</a>
+    <a class="button" href="day22.html">Day 22</a>
+    <a class="button" href="day23.html">Day 23</a>
+    <a class="button" href="day24.html">Day 24</a>
+    <a class="button" href="day25.html">Day 25</a>
+    <a class="button" href="day26.html">Day 26</a>
+    <a class="button" href="day27.html">Day 27</a>
+  </div>
+
+  <script>
+    function playVideo(path) {
+      window.open(path, '_blank');
+    }
+  </script>
+
+</body>
+</html>
